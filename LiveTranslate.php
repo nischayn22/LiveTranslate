@@ -49,6 +49,7 @@ $wgExtensionMessagesFiles['LiveTranslateMagic']	= $egLiveTranslateIP . '/LiveTra
 $wgAutoloadClasses['LiveTranslateHooks'] 			= $egLiveTranslateIP . '/LiveTranslate.hooks.php';
 $wgAutoloadClasses['ApiImportTranslationMemories']	= $egLiveTranslateIP . '/api/ApiImportTranslationMemories.php';
 $wgAutoloadClasses['ApiLiveTranslate']	 			= $egLiveTranslateIP . '/api/ApiLiveTranslate.php';
+$wgAutoloadClasses['ApiLTMSTranslator']	 			= $egLiveTranslateIP . '/api/ApiLTMSTranslator.php';
 $wgAutoloadClasses['ApiQueryLiveTranslate']	 		= $egLiveTranslateIP . '/api/ApiQueryLiveTranslate.php';
 $wgAutoloadClasses['ApiQueryTranslationMemories']	= $egLiveTranslateIP . '/api/ApiQueryTranslationMemories.php';
 
@@ -60,6 +61,7 @@ $wgAutoloadClasses['LTTMParser']					= $incDirIP . 'LT_TMParser.php';
 $wgAutoloadClasses['LTTMUnit']						= $incDirIP . 'LT_TMUnit.php';
 $wgAutoloadClasses['LTTMXParser']					= $incDirIP . 'LT_TMXParser.php';
 $wgAutoloadClasses['LTTranslationMemory']			= $incDirIP . 'LT_TranslationMemory.php';
+$wgAutoloadClasses['LTMSHTTPTranslator']			= $incDirIP . 'LT_MS_HTTPTranslator.php';
 unset( $incDirIP );
 
 $wgAutoloadClasses['SpecialLiveTranslate']	 		= $egLiveTranslateIP . '/specials/SpecialLiveTranslate.php';
@@ -71,6 +73,7 @@ $wgAPIModules['importtms'] = 'ApiImportTranslationMemories';
 $wgAPIModules['livetranslate'] = 'ApiLiveTranslate';
 $wgAPIListModules['livetranslate'] = 'ApiQueryLiveTranslate';
 $wgAPIListModules['translationmemories'] = 'ApiQueryTranslationMemories';
+$wgAPIModules['ltmstranslator'] = 'ApiLTMSTranslator';
 
 $wgHooks['ArticleViewHeader'][] = 'LiveTranslateHooks::onArticleViewHeader';
 $wgHooks['LoadExtensionSchemaUpdates'][] = 'LiveTranslateHooks::onSchemaUpdate';

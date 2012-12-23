@@ -41,11 +41,6 @@ final class LiveTranslateFunctions {
 					break;
 				case LTS_MS:
 					$modules[] = 'ext.lt.ms';
-					$wgOut->addScript(
-						Html::inlineScript(
-							'var ltMsAppId = ' . FormatJson::encode( $GLOBALS['egLiveTranslateMSAppId'] ) . ';'
-						)
-					);
 					break;
 			}
 			
@@ -407,10 +402,10 @@ final class LiveTranslateFunctions {
 	 * @return boolean
 	 */
 	public static function hasTranslationService() {
-		global $egLiveTranslateService, $egGoogleApiKey, $egLiveTranslateMSAppId;
+		global $egLiveTranslateService, $egGoogleApiKey, $egLiveTranslateMSClientId, $egLiveTranslateMSClientSecret;
 		
 		return ( $egLiveTranslateService == LTS_GOOGLE && $egGoogleApiKey != '' )
-			|| ( $egLiveTranslateService == LTS_MS && $egLiveTranslateMSAppId != '' );
+			|| ( $egLiveTranslateService == LTS_MS && $egLiveTranslateMSClientId != '' && $egLiveTranslateMSClientSecret != '' );
 	}
 	
 }
