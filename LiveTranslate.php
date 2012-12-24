@@ -2,7 +2,7 @@
 
 /**
  * Initialization file for the Live Translate extension.
- * 
+ *
  * Documentation:	 		http://www.mediawiki.org/wiki/Extension:Live_Translate
  * Support					http://www.mediawiki.org/wiki/Extension_talk:Live_Translate
  * Source code:             http://svn.wikimedia.org/viewvc/mediawiki/trunk/extensions/LiveTranslate
@@ -94,7 +94,7 @@ if ( defined( 'MW_SUPPORTS_RESOURCE_MODULES' ) ) {
 		'remoteExtPath' => 'LiveTranslate',
 		'group' => 'ext.livetranslate'
 	);
-	
+
 	$wgResourceModules['ext.livetranslate'] = $moduleTemplate + array(
 		'scripts' => array(
 			'includes/jquery.replaceText.js',
@@ -106,13 +106,13 @@ if ( defined( 'MW_SUPPORTS_RESOURCE_MODULES' ) ) {
 		'dependencies' => array( 'jquery'/*, 'jquery.ui.button'*/ ),
 		'messages' => $egLTJSMessages
 	);
-	
+
 	$wgResourceModules['ext.lt.google'] = $moduleTemplate + array(
 		'scripts' => array( 'includes/ext.lt.google.js' ),
 		'dependencies' => array( 'ext.livetranslate' ),
 		'messages' => array()
 	);
-	
+
 	$wgResourceModules['ext.lt.ms'] = $moduleTemplate + array(
 		'scripts' => array( 'includes/ext.lt.ms.js' ),
 		'dependencies' => array( 'ext.livetranslate' ),
@@ -122,7 +122,7 @@ if ( defined( 'MW_SUPPORTS_RESOURCE_MODULES' ) ) {
 
 /**
  * Enum for translation memory types.
- * 
+ *
  * @since 0.4
  */
 define( 'TMT_LTF', 0 );
@@ -131,7 +131,7 @@ define( 'TMT_GCSV', 2 );
 
 /**
  * Enum for translation services.
- * 
+ *
  * @since 1.1
  */
 define( 'LTS_GOOGLE', 0 );

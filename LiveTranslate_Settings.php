@@ -74,3 +74,6 @@ $egLiveTranslateMSAppId = '';
 
 $egLiveTranslateLanguages[] = 'nl';
 $egLiveTranslateLanguages[] = 'de';
+
+# Auto-translation enabled.
+$egAutoTranslate = true;
